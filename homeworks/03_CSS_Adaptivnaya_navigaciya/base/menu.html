@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        div.MenuLevel1 { width: 100px }
+        div.MenuLevel1 > div { background-color: darkgray; border: solid black 1px; position: relative; cursor: pointer }
+        div.MenuLevel2 { width: 150px; display: none }
+        div.MenuLevel2 > div { background-color:darkgray; border: solid black 1px; cursor: pointer }
+        div.MenuLevel1 > div:hover div.MenuLevel2 { display: block; position: absolute; left: 80%; top: 90%; z-index: 1 }
+        
+        @media all and (min-width: 600px){
+        div.MenuLevel1 { width: 100%; }
+        div.MenuLevel1 > div { width: 100px; float:left; background-color: darkgray; border: solid black 1px; position: relative; cursor: pointer }
+        div.MenuLevel2 { width: 150px; display: none }
+        div.MenuLevel2 > div {width: 100px; background-color:darkgray; border: solid black 1px; cursor: pointer }
+        div.MenuLevel1 > div:hover div.MenuLevel2 { display: block; position: absolute; left: 0%; top: 100%; z-index: 1 }
+        div.MenuLevel1 > div:hover {background-color: gray;}
+        }
+    </style>
+</head>
+<body>
+    <div class='MenuLevel1'>
+        <div>пункт 1
+            <div class='MenuLevel2'>
+                <div>выпадающий пункт 1.1</div>
+                <div>выпадающий пункт 1.2</div>
+                <div>выпадающий пункт 1.3</div>
+            </div>
+        </div>
+        <div>пункт 2
+            <div class='MenuLevel2'>
+                <div>выпадающий пункт 2.1</div>
+                <div>выпадающий пункт 2.2</div>
+                <div>выпадающий пункт 2.3</div>
+            </div>
+        </div>
+        <div>пункт 3
+            <div class='MenuLevel2'>
+                <div>выпадающий пункт 3.1</div>
+                <div>выпадающий пункт 3.2</div>
+            </div>
+        </div>
+        <div>пункт 4
+            <div class='MenuLevel2'>
+                <div>выпадающий пункт 4.1</div>
+                <div>выпадающий пункт 4.2</div>
+            </div>
+        </div>
+        <div>пункт 5
+            <div class='MenuLevel2'>
+                <div>выпадающий пункт 5.1</div>
+                <div>выпадающий пункт 5.2</div>
+            </div>
+        </div>
+    
+    </div>
+    
+</body>
+</html>
